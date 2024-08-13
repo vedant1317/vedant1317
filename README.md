@@ -1,5 +1,4 @@
 - 👋 Hi, I’m Vedant Walunj
-- 👀 I’m interested in Problem Solving, Web Development
 - 🌱 I’m currently learning C++
 - 💞️ I’m looking to collaborate on JavaScript, Java, Python
 - 📫 How to reach me linkedin.com/in/vedantwalunj

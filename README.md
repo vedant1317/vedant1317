@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=6EE7DB&center=true&vCenter=true&width=640&height=48&lines=Hi%2C+I'm+Vedant+Walunj+%F0%9F%91%8B;Backend+and+Cloud+Developer;Building+agentic+AI+and+security+tooling;IT+Engineer+%40+KJ+Somaiya+%E2%80%A2+9.55+CGPA" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=6EE7DB&center=true&vCenter=true&width=640&height=48&v=3&lines=Hi%2C+I'm+Vedant+Walunj+%F0%9F%91%8B;Backend+and+Cloud+Developer;Building+agentic+AI+and+security+tooling;IT+Engineer+%40+KJ+Somaiya+%E2%80%A2+9.55+CGPA" alt="Vedant Walunj" />
 
 ### Backend systems • Cloud security • Full-stack products
 
@@ -78,19 +78,16 @@
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub & LeetCode
 
 <div align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=vedant1317&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vedant1317&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
-</div>
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=vedant1317&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</div>
+<img src="https://streak-stats.demolab.com?user=vedant1317&theme=tokyonight&hide_border=true&v=3" alt="GitHub Streak" />
 
-<div align="center">
-  <img src="https://leetcard.jacoblin.cool/vedantvw?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode Stats" />
+<br/>
+
+<img src="https://leetcard.jacoblin.cool/vedantvw?theme=dark&font=Fira%20Code&ext=heatmap&v=3" alt="LeetCode Stats" />
+
 </div>
 
 ---

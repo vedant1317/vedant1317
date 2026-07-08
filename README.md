@@ -82,11 +82,11 @@
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=vedant1317&theme=tokyonight&hide_border=true&v=3" alt="GitHub Streak" />
+<img src="https://streak-stats.demolab.com?user=vedant1317&theme=tokyonight&hide_border=true&disable_animations=true&v=4" alt="GitHub Streak" />
 
 <br/>
 
-<img src="https://leetcard.jacoblin.cool/vedantvw?theme=dark&font=Fira%20Code&ext=heatmap&v=3" alt="LeetCode Stats" />
+<img src="https://leetcard.jacoblin.cool/vedantvw?theme=dark&font=Fira%20Code&ext=heatmap&animation=false&v=4" alt="LeetCode Stats" />
 
 </div>
 

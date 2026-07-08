@@ -78,15 +78,17 @@
 
 ---
 
-## 📊 GitHub & LeetCode
+## 📊 Coding Stats
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=vedant1317&theme=tokyonight&hide_border=true&disable_animations=true&v=4" alt="GitHub Streak" />
+![GitHub Followers](https://img.shields.io/github/followers/vedant1317?style=for-the-badge&logo=github&label=Followers&labelColor=0a0e14&color=6E56CF)
+&nbsp;
+![Repos](https://img.shields.io/badge/Public_Repos-12-6E56CF?style=for-the-badge&logo=github&labelColor=0a0e14)
 
-<br/>
+<br/><br/>
 
-<img src="https://leetcard.jacoblin.cool/vedantvw?theme=dark&font=Fira%20Code&ext=heatmap&animation=false&v=4" alt="LeetCode Stats" />
+<img src="https://leetcard.jacoblin.cool/vedantvw?theme=dark&font=Fira%20Code&ext=heatmap&animation=false&v=5" alt="LeetCode Stats" />
 
 </div>
 

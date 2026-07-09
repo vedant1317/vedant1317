@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=6EE7DB&center=true&vCenter=true&width=640&height=48&v=3&lines=Hi%2C+I'm+Vedant+Walunj+%F0%9F%91%8B;Backend+and+Cloud+Developer;Building+agentic+AI+and+security+tooling;IT+Engineer+%40+KJ+Somaiya+%E2%80%A2+9.55+CGPA" alt="Vedant Walunj" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=6EE7DB&center=true&vCenter=true&width=640&height=48&v=6&lines=Hi%2C+I'm+Vedant+Walunj+%F0%9F%91%8B;Backend+%2B+Cloud+Developer;Building+agentic+AI+%2B+security+tooling;Python+%C2%B7+TypeScript+%C2%B7+AWS+%C2%B7+React" alt="Vedant Walunj" />
 
 ### Backend systems • Cloud security • Full-stack products
 
@@ -26,11 +26,11 @@
 
 ## 🧑‍💻 About Me
 
-- 🔭 **Technical Intern @ [ARCON](https://arconnet.com)** — building cloud-security automation in the DevOps team, reporting to the CISO. I automate CVE extraction & remediation and audit AWS activity via CloudTrail (IAM, MFA, policy, and Elastic IP events).
-- 🎓 **B.Tech in IT, Honors in AI @ KJ Somaiya College of Engineering** — CGPA **9.55**.
-- 💼 **Treasurer @ ACM KJSCE** — ran budgets & sponsorships and co-organized *AfterMath* (1,150+ registrations) and *Artemis* (50+ teams).
-- ⚡ I like building things that solve real problems — agentic AI platforms, backend systems, and developer tooling.
-- 🎬 Off the clock, I'm probably logging films on [Letterboxd](https://letterboxd.com/vboiwatches/) or curating playlists.
+- 🔭 I build **backend systems, cloud-security automation, and agentic AI** platforms.
+- 🧰 Full-stack comfortable — REST APIs, SQL & NoSQL databases, DevOps pipelines, and React dashboards.
+- ☁️ Currently deep in **AWS security tooling** (CloudTrail auditing, CVE remediation) and **multi-agent LLM orchestration**.
+- 🌱 Always leveling up — exploring distributed systems, infrastructure, and DSA in `C++`.
+- 💬 Ask me about **Python, TypeScript, agentic AI, or cloud security**.
 
 ---
 
@@ -95,7 +95,5 @@
 ---
 
 <div align="center">
-  <i>Secured 2nd place @ KJSSE Gajshield HackX · Finalist @ Datathon 2026</i>
-  <br/><br/>
-  <b>Let's build something that matters.</b>
+  <b>⚡ Always shipping. Let's build something that matters.</b>
 </div>

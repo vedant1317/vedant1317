@@ -64,36 +64,6 @@
 
 ---
 
-## 🚀 Featured Projects
-
-| Project | Description | Stack |
-| :------ | :---------- | :---- |
-| **🧠 NERVE** | Agentic AI sales platform — a 10-agent backend automating lead enrichment, intent scoring & outreach, with a real-time SSE dashboard. | `Groq Llama 3.3` `Mastra` `Hono` `MongoDB` `React` |
-| **🧭 PathFinder** | Full-stack career-guidance platform with role-based admin, assessments, bookings, payments & a multilingual AI chatbot. | `React` `Express` `PostgreSQL` `OpenAI` |
-| **🏎️ PitLane** | Database benchmarking tool for evidence-driven selection across PostgreSQL, MongoDB & DynamoDB with CI regression gates. | `Python` `FastAPI` `Docker` |
-
-<div align="center">
-  <a href="https://vedant-walunj-portfolio.vercel.app"><b>→ See everything on my portfolio</b></a>
-</div>
-
----
-
-## 📊 Coding Stats
-
-<div align="center">
-
-![GitHub Followers](https://img.shields.io/github/followers/vedant1317?style=for-the-badge&logo=github&label=Followers&labelColor=0a0e14&color=6E56CF)
-&nbsp;
-![Repos](https://img.shields.io/badge/Public_Repos-12-6E56CF?style=for-the-badge&logo=github&labelColor=0a0e14)
-
-<br/><br/>
-
-<img src="https://leetcard.jacoblin.cool/vedantvw?theme=dark&font=Fira%20Code&ext=heatmap&animation=false&v=5" alt="LeetCode Stats" />
-
-</div>
-
----
-
 <div align="center">
   <b>⚡ Always shipping. Let's build something that matters.</b>
 </div>

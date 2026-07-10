@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=vedant1317&style=for-the-badge&color=388bfd&labelColor=0d1117&label=PROFILE+VIEWS" alt="views">
-  <img src="https://img.shields.io/github/followers/vedant1317?style=for-the-badge&color=388bfd&labelColor=0d1117&logo=github&logoColor=white" alt="followers">
-  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-52_solved-388bfd?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=0d1117" alt="leetcode"></a>
+  <img src="https://komarev.com/ghpvc/?username=vedant1317&style=for-the-badge&color=d97757&labelColor=1f1d1a&label=PROFILE+VIEWS" alt="views">
+  <img src="https://img.shields.io/github/followers/vedant1317?style=for-the-badge&color=d97757&labelColor=1f1d1a&logo=github&logoColor=white" alt="followers">
+  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-52_solved-d97757?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=1f1d1a" alt="leetcode"></a>
 </p>
 
 ---
@@ -29,11 +29,11 @@
 ## 🔗 Connect With Me
 
 <p align="left">
-  <a href="mailto:vedantwalunj1317@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
-  <a href="https://www.linkedin.com/in/vedantwalunj/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"></a>
-  <a href="https://vedant-walunj-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
-  <a href="https://letterboxd.com/vboiwatches/"><img src="https://img.shields.io/badge/Letterboxd-202830?style=for-the-badge&logo=letterboxd&logoColor=00E054" alt="Letterboxd"></a>
+  <a href="mailto:vedantwalunj1317@gmail.com"><img src="https://img.shields.io/badge/Gmail-1f1d1a?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Gmail"></a>
+  <a href="https://www.linkedin.com/in/vedantwalunj/"><img src="https://img.shields.io/badge/LinkedIn-1f1d1a?style=for-the-badge&logo=linkedin&logoColor=4493f8" alt="LinkedIn"></a>
+  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-1f1d1a?style=for-the-badge&logo=leetcode&logoColor=FFA116" alt="LeetCode"></a>
+  <a href="https://vedant-walunj-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-1f1d1a?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
+  <a href="https://letterboxd.com/vboiwatches/"><img src="https://img.shields.io/badge/Letterboxd-1f1d1a?style=for-the-badge&logo=letterboxd&logoColor=00E054" alt="Letterboxd"></a>
 </p>
 
 ---

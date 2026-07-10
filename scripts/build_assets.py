@@ -5,12 +5,12 @@ Stdlib-only so it runs in GitHub Actions. The GitHub stats card is redrawn
 from live data (with stats.json as a fallback when the API is unavailable),
 so it never depends on the flaky public github-readme-stats service.
 
-Design: monochrome dark, a single restrained accent, editorial typography.
-No decorative gradients — language colors are the only chromatic element,
-because there they carry meaning.
+Theme: Claude Code — warm near-black, Anthropic cream text, and the Claude
+coral accent (#D97757), styled like a terminal / CLI session.
 """
 import html
 import json
+import math
 import os
 import urllib.request
 from pathlib import Path
@@ -20,20 +20,23 @@ ASSETS = ROOT / "assets"
 ASSETS.mkdir(exist_ok=True)
 GH_USER = "vedant1317"
 
-# ---- palette: one accent, everything else neutral ----
-BG = "#0d1117"       # matches GitHub dark so cards sit flush
-CODE_BG = "#010409"
-BORDER = "#26303d"
-HAIR = "#1b232f"     # faint divider / leader
-TEXT = "#e6edf3"
-SUBTLE = "#adbac7"
-MUTED = "#7d8590"
-FAINT = "#4b5563"
-ACCENT = "#4c9aff"   # single accent — swap this one value to re-theme
-STRING = "#a5d6ff"   # soft blue for code strings (same family as accent)
+# ---- Claude Code palette: warm dark + coral ----
+BG = "#1f1d1a"        # warm near-black card
+CODE_BG = "#17150f"   # terminal inner
+BORDER = "#3a352d"    # warm hairline border
+BORDER_ACC = "#5a4636"  # coral-tinted border
+HAIR = "#2b261f"      # faint divider / leader / track
+TRACK = "#2b261f"
+TEXT = "#ece7dd"      # warm off-white (Anthropic paper on dark)
+SUBTLE = "#cabfb0"
+MUTED = "#8a8377"
+FAINT = "#5c5347"
+ACCENT = "#d97757"    # Claude coral — the one accent
+STRING = "#cc9b7a"    # warm tan for code strings
 
 SANS = "-apple-system,'Segoe UI',Roboto,Ubuntu,sans-serif"
 MONO = "'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace"
+CW = 0.6  # monospace char-width / font-size ratio
 
 LANG_COLORS = {
     "JavaScript": "#f1e05a", "Python": "#3776ab", "TypeScript": "#3178c6",
@@ -86,81 +89,97 @@ def esc(s):
     return html.escape(str(s))
 
 
-def frame(w, h, rx=14):
-    """Card background + subtle top highlight + hairline border."""
+def frame(w, h, rx=14, bg=BG, border=BORDER):
     return (
-        f'<rect width="{w}" height="{h}" rx="{rx}" fill="{BG}"/>'
+        f'<rect width="{w}" height="{h}" rx="{rx}" fill="{bg}"/>'
         f'<rect x="0.75" y="0.75" width="{w-1.5}" height="{h-1.5}" rx="{rx-0.5}" '
-        f'fill="none" stroke="{BORDER}" stroke-width="1"/>'
-        f'<rect x="{rx}" y="1.25" width="{w-2*rx}" height="1" fill="#ffffff" opacity="0.05"/>'
+        f'fill="none" stroke="{border}" stroke-width="1"/>'
+        f'<rect x="{rx}" y="1.25" width="{w-2*rx}" height="1" fill="#fff" opacity="0.045"/>'
     )
 
 
 def dot_pattern():
-    return (f'<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">'
-            f'<circle cx="1" cy="1" r="1" fill="#ffffff" opacity="0.028"/></pattern>')
+    return ('<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">'
+            '<circle cx="1" cy="1" r="1" fill="#fff" opacity="0.03"/></pattern>')
+
+
+def spark(cx, cy, r, color=ACCENT, w=2.2):
+    """The Claude coral spark — an 8-ray asterisk."""
+    lines = []
+    for ang in (0, 45, 90, 135):
+        a = math.radians(ang)
+        dx, dy = math.cos(a) * r, math.sin(a) * r
+        lines.append(f'<line x1="{cx-dx:.1f}" y1="{cy-dy:.1f}" x2="{cx+dx:.1f}" y2="{cy+dy:.1f}"/>')
+    return (f'<g stroke="{color}" stroke-width="{w}" stroke-linecap="round">'
+            + "".join(lines) + '</g>')
 
 
 def caps(x, y, label, anchor="start"):
-    """Small-caps letter-spaced section label with a short accent underline."""
     return (f'<text x="{x}" y="{y}" font-family="{MONO}" font-size="12" letter-spacing="2.5" '
             f'fill="{MUTED}" text-anchor="{anchor}">{esc(label.upper())}</text>'
             f'<rect x="{x}" y="{y+9}" width="26" height="2" rx="1" fill="{ACCENT}"/>')
 
 
 # ============================ BANNER ============================
-def build_banner():
-    W, H = 1200, 290
+def build_banner(st):
+    W, H = 1200, 300
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
          f'viewBox="0 0 {W} {H}" font-family="{SANS}">',
          f'<defs>{dot_pattern()}</defs>',
          frame(W, H, 16),
          f'<rect width="{W}" height="{H}" rx="16" fill="url(#dots)"/>']
 
-    # name block with accent rule
-    nx = 76
-    s.append(f'<rect x="{nx}" y="70" width="4" height="96" rx="2" fill="{ACCENT}"/>')
-    s.append(f'<text x="{nx+24}" y="122" font-size="54" font-weight="800" fill="{TEXT}" '
-             f'letter-spacing="-0.5">VEDANT WALUNJ</text>')
-    s.append(f'<text x="{nx+26}" y="154" font-family="{MONO}" font-size="18" fill="{MUTED}">'
-             f'Backend Engineer &#183; Cloud Security &#183; Agentic AI</text>')
-    # meta line with accent middots
-    meta = ["MUMBAI, INDIA", "IT · HONORS IN AI", "@VEDANT1317"]
-    mx = nx + 26
-    s.append(f'<g font-family="{MONO}" font-size="11.5" letter-spacing="1.5">')
-    for i, part in enumerate(meta):
-        if i:
-            s.append(f'<text x="{mx}" y="196" fill="{ACCENT}">&#9679;</text>')
-            mx += 22
-        s.append(f'<text x="{mx}" y="196" fill="{MUTED}">{esc(part)}</text>')
-        mx += len(part) * 8.1 + 10
-    s.append('</g>')
+    # --- window titlebar ---
+    s.append(f'<rect x="1" y="1" width="{W-2}" height="38" rx="16" fill="#191712"/>')
+    s.append(f'<rect x="1" y="22" width="{W-2}" height="17" fill="#191712"/>')
+    for i, c in enumerate(("#c1613f", "#c99a4e", "#5b7a4a")):
+        s.append(f'<circle cx="{24+i*18}" cy="20" r="5" fill="{c}" opacity="0.85"/>')
+    s.append(f'<text x="{W/2}" y="24" font-family="{MONO}" font-size="12.5" fill="{FAINT}" '
+             f'text-anchor="middle">vedant-walunj — claude-code — zsh</text>')
+    s.append(f'<line x1="1" y1="39" x2="{W-1}" y2="39" stroke="{BORDER}"/>')
 
-    # terminal card
-    cx, cy, cw, ch = 724, 58, 404, 174
-    s.append(f'<rect x="{cx}" y="{cy}" width="{cw}" height="{ch}" rx="10" fill="{CODE_BG}" '
-             f'stroke="{BORDER}"/>')
-    s.append(f'<rect x="{cx}" y="{cy}" width="{cw}" height="34" rx="10" fill="#0d131c"/>')
-    s.append(f'<rect x="{cx}" y="{cy+24}" width="{cw}" height="10" fill="#0d131c"/>')
-    for i in range(3):
-        s.append(f'<circle cx="{cx+20+i*18}" cy="{cy+17}" r="5" fill="#2b333d"/>')
-    s.append(f'<text x="{cx+cw-18}" y="{cy+21}" font-family="{MONO}" font-size="11.5" '
-             f'fill="{FAINT}" text-anchor="end">vedant.ts</text>')
-    code = [
-        [(FAINT, "const"), (SUBTLE, " vedant"), (FAINT, " = {")],
-        [(SUBTLE, "  role:   "), (STRING, '"Backend + Cloud Dev"'), (FAINT, ",")],
-        [(SUBTLE, "  stack:  "), (FAINT, "["), (STRING, '"Python"'), (FAINT, ", "),
-         (STRING, '"TS"'), (FAINT, ", "), (STRING, '"AWS"'), (FAINT, "],")],
-        [(SUBTLE, "  focus:  "), (STRING, '"agentic AI · security"'), (FAINT, ",")],
-        [(SUBTLE, "  status: "), (STRING, '"always shipping"'), (FAINT, ",")],
-        [(FAINT, "}")],
+    # --- left: identity ---
+    x0 = 64
+    s.append(spark(x0 + 12, 92, 11))
+    s.append(f'<text x="{x0+34}" y="98" font-family="{MONO}" font-size="15" fill="{SUBTLE}">'
+             f'Welcome to Vedant Walunj’s GitHub</text>')
+    s.append(f'<text x="{x0}" y="168" font-size="52" font-weight="800" fill="{TEXT}" '
+             f'letter-spacing="-0.5">VEDANT WALUNJ</text>')
+    s.append(f'<text x="{x0+2}" y="200" font-family="{MONO}" font-size="17" fill="{MUTED}">'
+             f'Backend Engineer &#183; Cloud Security &#183; Agentic AI</text>')
+    # slash-command hints (Claude Code style dim hints)
+    hy = 244
+    s.append(f'<text x="{x0+2}" y="{hy}" font-family="{MONO}" font-size="14" '
+             f'xml:space="preserve"><tspan fill="{FAINT}">&gt; </tspan>'
+             f'<tspan fill="{ACCENT}">/projects</tspan><tspan fill="{FAINT}">   </tspan>'
+             f'<tspan fill="{ACCENT}">/skills</tspan><tspan fill="{FAINT}">   </tspan>'
+             f'<tspan fill="{ACCENT}">/contact</tspan>'
+             f'<tspan fill="{MUTED}">   · always shipping</tspan></text>')
+
+    # --- right: Claude Code welcome box ---
+    bx, by, bw, bh = 748, 68, 388, 176
+    s.append(f'<g transform="translate({bx},{by})">{frame(bw, bh, 12, CODE_BG, BORDER_ACC)}</g>')
+    s.append(spark(bx + 26, by + 32, 8))
+    s.append(f'<text x="{bx+44}" y="{by+37}" font-family="{MONO}" font-size="13.5" '
+             f'fill="{TEXT}">Session started</text>')
+    s.append(f'<line x1="{bx+22}" y1="{by+52}" x2="{bx+bw-22}" y2="{by+52}" stroke="{HAIR}"/>')
+    rows = [
+        f'cwd: ~/vedant-walunj',
+        f'{st.get("repos", 9)} repos · {st.get("commits", 39)} commits',
+        f'IT · Honors in AI · Mumbai',
     ]
-    ty = cy + 60
-    for line in code:
-        spans = "".join(f'<tspan fill="{c}">{esc(t)}</tspan>' for c, t in line)
-        s.append(f'<text x="{cx+22}" y="{ty}" font-family="{MONO}" font-size="14" '
-                 f'xml:space="preserve">{spans}</text>')
-        ty += 20
+    ry = by + 78
+    for r in rows:
+        s.append(f'<text x="{bx+24}" y="{ry}" font-family="{MONO}" font-size="13" '
+                 f'xml:space="preserve"><tspan fill="{ACCENT}">→ </tspan>'
+                 f'<tspan fill="{MUTED}">{esc(r)}</tspan></text>')
+        ry += 26
+    # prompt + cursor
+    cur_x = bx + 24 + (len("> ready ")) * 13 * CW
+    s.append(f'<text x="{bx+24}" y="{by+bh-20}" font-family="{MONO}" font-size="13" '
+             f'xml:space="preserve"><tspan fill="{FAINT}">&gt; </tspan>'
+             f'<tspan fill="{SUBTLE}">ready</tspan></text>')
+    s.append(f'<rect x="{cur_x:.0f}" y="{by+bh-31}" width="8" height="15" fill="{ACCENT}"/>')
     s.append("</svg>")
     (ASSETS / "banner.svg").write_text("\n".join(s))
     print("wrote assets/banner.svg")
@@ -170,21 +189,20 @@ def build_banner():
 def build_stats_card(st):
     W, H = 860, 236
     PW = 400
-    RX = W - PW  # right panel start
+    RX = W - PW
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
          f'viewBox="0 0 {W} {H}" font-family="{SANS}">']
-    # panels
     for px in (0, RX):
         s.append(f'<g transform="translate({px},0)">{frame(PW, H, 12)}</g>')
 
-    # -- left: stats with dotted leaders --
+    # left: stats with dotted leaders
     s.append(f'<g transform="translate(28,0)">{caps(0, 40, "GitHub / Stats")}</g>')
     rows = [
         ("Public Repos", st.get("repos", 9)),
-        ("Total Commits", st.get("commits", 38)),
+        ("Total Commits", st.get("commits", 39)),
         ("Followers", st.get("followers", 5)),
         ("Issues Opened", st.get("issues", 2)),
-        ("Languages Used", st.get("lang_count", 7)),
+        ("Languages Used", st.get("lang_count", 6)),
     ]
     y = 82
     for label, val in rows:
@@ -197,9 +215,9 @@ def build_stats_card(st):
                  f'text-anchor="end">{esc(val)}</text>')
         y += 29
 
-    # -- right: languages --
+    # right: languages
     s.append(f'<g transform="translate({RX+28},0)">{caps(0, 40, "Most Used Languages")}</g>')
-    langs = st.get("langs") or [["JavaScript", 38.7], ["Python", 28.6],
+    langs = st.get("langs") or [["JavaScript", 38.7], ["Python", 28.7],
                                 ["TypeScript", 19.2], ["CSS", 8.5], ["HTML", 4.6]]
     barw = PW - 56
     y = 74
@@ -209,7 +227,7 @@ def build_stats_card(st):
                  f'fill="{SUBTLE}">{esc(name)}</text>')
         s.append(f'<text x="{RX+28+barw}" y="{y}" font-family="{MONO}" font-size="12" '
                  f'fill="{MUTED}" text-anchor="end">{pct}%</text>')
-        s.append(f'<rect x="{RX+28}" y="{y+8}" width="{barw}" height="6" rx="3" fill="#161b22"/>')
+        s.append(f'<rect x="{RX+28}" y="{y+8}" width="{barw}" height="6" rx="3" fill="{TRACK}"/>')
         s.append(f'<rect x="{RX+28}" y="{y+8}" width="{max(5, barw*pct/100):.1f}" height="6" '
                  f'rx="3" fill="{col}"/>')
         y += 31
@@ -227,17 +245,15 @@ def build_footer():
          frame(W, H, 16),
          f'<rect width="{W}" height="{H}" rx="16" fill="url(#dots)"/>']
     cx = W / 2
-    # monogram
-    s.append(f'<rect x="{cx-22}" y="30" width="44" height="44" rx="10" fill="none" '
-             f'stroke="{BORDER}"/>')
-    s.append(f'<text x="{cx}" y="60" font-family="{MONO}" font-size="18" font-weight="700" '
-             f'fill="{ACCENT}" text-anchor="middle">VW</text>')
-    s.append(f'<text x="{cx}" y="105" font-size="17" font-weight="600" fill="{TEXT}" '
+    # spark mark in a box
+    s.append(f'<g transform="translate({cx-22},30)">{frame(44, 44, 10, CODE_BG, BORDER_ACC)}</g>')
+    s.append(spark(cx, 52, 11))
+    s.append(f'<rect x="{cx-16}" y="86" width="32" height="2" rx="1" fill="{ACCENT}"/>')
+    s.append(f'<text x="{cx}" y="108" font-size="17" font-weight="600" fill="{TEXT}" '
              f'text-anchor="middle" letter-spacing="0.3">Thanks for stopping by</text>')
-    s.append(f'<text x="{cx}" y="128" font-family="{MONO}" font-size="12.5" fill="{MUTED}" '
-             f'text-anchor="middle">// let\'s build something that matters</text>')
-    # short accent underline
-    s.append(f'<rect x="{cx-16}" y="84" width="32" height="2" rx="1" fill="{ACCENT}"/>')
+    s.append(f'<text x="{cx}" y="130" font-family="{MONO}" font-size="12.5" fill="{MUTED}" '
+             f'text-anchor="middle" xml:space="preserve">'
+             f'<tspan fill="{FAINT}">&gt; </tspan>let’s build something that matters</text>')
     s.append("</svg>")
     (ASSETS / "footer.svg").write_text("\n".join(s))
     print("wrote assets/footer.svg")
@@ -245,7 +261,7 @@ def build_footer():
 
 if __name__ == "__main__":
     st = gather_stats()
-    build_banner()
+    build_banner(st)
     build_stats_card(st)
     build_footer()
     print("stats:", st)

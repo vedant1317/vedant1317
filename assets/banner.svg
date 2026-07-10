@@ -1,28 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" font-family="-apple-system,'Segoe UI',Roboto,Ubuntu,sans-serif">
-<defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ffffff" opacity="0.028"/></pattern></defs>
-<rect width="1200" height="290" rx="16" fill="#0d1117"/><rect x="0.75" y="0.75" width="1198.5" height="288.5" rx="15.5" fill="none" stroke="#26303d" stroke-width="1"/><rect x="16" y="1.25" width="1168" height="1" fill="#ffffff" opacity="0.05"/>
-<rect width="1200" height="290" rx="16" fill="url(#dots)"/>
-<rect x="76" y="70" width="4" height="96" rx="2" fill="#4c9aff"/>
-<text x="100" y="122" font-size="54" font-weight="800" fill="#e6edf3" letter-spacing="-0.5">VEDANT WALUNJ</text>
-<text x="102" y="154" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="18" fill="#7d8590">Backend Engineer &#183; Cloud Security &#183; Agentic AI</text>
-<g font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="11.5" letter-spacing="1.5">
-<text x="102" y="196" fill="#7d8590">MUMBAI, INDIA</text>
-<text x="217.3" y="196" fill="#4c9aff">&#9679;</text>
-<text x="239.3" y="196" fill="#7d8590">IT · HONORS IN AI</text>
-<text x="387.0" y="196" fill="#4c9aff">&#9679;</text>
-<text x="409.0" y="196" fill="#7d8590">@VEDANT1317</text>
-</g>
-<rect x="724" y="58" width="404" height="174" rx="10" fill="#010409" stroke="#26303d"/>
-<rect x="724" y="58" width="404" height="34" rx="10" fill="#0d131c"/>
-<rect x="724" y="82" width="404" height="10" fill="#0d131c"/>
-<circle cx="744" cy="75" r="5" fill="#2b333d"/>
-<circle cx="762" cy="75" r="5" fill="#2b333d"/>
-<circle cx="780" cy="75" r="5" fill="#2b333d"/>
-<text x="1110" y="79" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="11.5" fill="#4b5563" text-anchor="end">vedant.ts</text>
-<text x="746" y="118" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#4b5563">const</tspan><tspan fill="#adbac7"> vedant</tspan><tspan fill="#4b5563"> = {</tspan></text>
-<text x="746" y="138" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#adbac7">  role:   </tspan><tspan fill="#a5d6ff">&quot;Backend + Cloud Dev&quot;</tspan><tspan fill="#4b5563">,</tspan></text>
-<text x="746" y="158" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#adbac7">  stack:  </tspan><tspan fill="#4b5563">[</tspan><tspan fill="#a5d6ff">&quot;Python&quot;</tspan><tspan fill="#4b5563">, </tspan><tspan fill="#a5d6ff">&quot;TS&quot;</tspan><tspan fill="#4b5563">, </tspan><tspan fill="#a5d6ff">&quot;AWS&quot;</tspan><tspan fill="#4b5563">],</tspan></text>
-<text x="746" y="178" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#adbac7">  focus:  </tspan><tspan fill="#a5d6ff">&quot;agentic AI · security&quot;</tspan><tspan fill="#4b5563">,</tspan></text>
-<text x="746" y="198" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#adbac7">  status: </tspan><tspan fill="#a5d6ff">&quot;always shipping&quot;</tspan><tspan fill="#4b5563">,</tspan></text>
-<text x="746" y="218" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#4b5563">}</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" font-family="-apple-system,'Segoe UI',Roboto,Ubuntu,sans-serif">
+<defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#fff" opacity="0.03"/></pattern></defs>
+<rect width="1200" height="300" rx="16" fill="#1f1d1a"/><rect x="0.75" y="0.75" width="1198.5" height="298.5" rx="15.5" fill="none" stroke="#3a352d" stroke-width="1"/><rect x="16" y="1.25" width="1168" height="1" fill="#fff" opacity="0.045"/>
+<rect width="1200" height="300" rx="16" fill="url(#dots)"/>
+<rect x="1" y="1" width="1198" height="38" rx="16" fill="#191712"/>
+<rect x="1" y="22" width="1198" height="17" fill="#191712"/>
+<circle cx="24" cy="20" r="5" fill="#c1613f" opacity="0.85"/>
+<circle cx="42" cy="20" r="5" fill="#c99a4e" opacity="0.85"/>
+<circle cx="60" cy="20" r="5" fill="#5b7a4a" opacity="0.85"/>
+<text x="600.0" y="24" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="12.5" fill="#5c5347" text-anchor="middle">vedant-walunj — claude-code — zsh</text>
+<line x1="1" y1="39" x2="1199" y2="39" stroke="#3a352d"/>
+<g stroke="#d97757" stroke-width="2.2" stroke-linecap="round"><line x1="65.0" y1="92.0" x2="87.0" y2="92.0"/><line x1="68.2" y1="84.2" x2="83.8" y2="99.8"/><line x1="76.0" y1="81.0" x2="76.0" y2="103.0"/><line x1="83.8" y1="84.2" x2="68.2" y2="99.8"/></g>
+<text x="98" y="98" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="15" fill="#cabfb0">Welcome to Vedant Walunj’s GitHub</text>
+<text x="64" y="168" font-size="52" font-weight="800" fill="#ece7dd" letter-spacing="-0.5">VEDANT WALUNJ</text>
+<text x="66" y="200" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="17" fill="#8a8377">Backend Engineer &#183; Cloud Security &#183; Agentic AI</text>
+<text x="66" y="244" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#5c5347">&gt; </tspan><tspan fill="#d97757">/projects</tspan><tspan fill="#5c5347">   </tspan><tspan fill="#d97757">/skills</tspan><tspan fill="#5c5347">   </tspan><tspan fill="#d97757">/contact</tspan><tspan fill="#8a8377">   · always shipping</tspan></text>
+<g transform="translate(748,68)"><rect width="388" height="176" rx="12" fill="#17150f"/><rect x="0.75" y="0.75" width="386.5" height="174.5" rx="11.5" fill="none" stroke="#5a4636" stroke-width="1"/><rect x="12" y="1.25" width="364" height="1" fill="#fff" opacity="0.045"/></g>
+<g stroke="#d97757" stroke-width="2.2" stroke-linecap="round"><line x1="766.0" y1="100.0" x2="782.0" y2="100.0"/><line x1="768.3" y1="94.3" x2="779.7" y2="105.7"/><line x1="774.0" y1="92.0" x2="774.0" y2="108.0"/><line x1="779.7" y1="94.3" x2="768.3" y2="105.7"/></g>
+<text x="792" y="105" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="13.5" fill="#ece7dd">Session started</text>
+<line x1="770" y1="120" x2="1114" y2="120" stroke="#2b261f"/>
+<text x="772" y="146" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="13" xml:space="preserve"><tspan fill="#d97757">→ </tspan><tspan fill="#8a8377">cwd: ~/vedant-walunj</tspan></text>
+<text x="772" y="172" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="13" xml:space="preserve"><tspan fill="#d97757">→ </tspan><tspan fill="#8a8377">9 repos · 41 commits</tspan></text>
+<text x="772" y="198" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="13" xml:space="preserve"><tspan fill="#d97757">→ </tspan><tspan fill="#8a8377">IT · Honors in AI · Mumbai</tspan></text>
+<text x="772" y="224" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="13" xml:space="preserve"><tspan fill="#5c5347">&gt; </tspan><tspan fill="#cabfb0">ready</tspan></text>
+<rect x="834" y="213" width="8" height="15" fill="#d97757"/>
 </svg>

@@ -1,35 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" font-family="'Segoe UI',Ubuntu,sans-serif">
-<defs>
-      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/></linearGradient>
-      <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#a371f7"/><stop offset="0.55" stop-color="#39d0d8"/>
-        <stop offset="1" stop-color="#f778ba"/></linearGradient>
-      <radialGradient id="g1" cx="0.12" cy="0.15" r="0.5">
-        <stop offset="0" stop-color="#a371f7" stop-opacity="0.28"/>
-        <stop offset="1" stop-color="#a371f7" stop-opacity="0"/></radialGradient>
-      <radialGradient id="g2" cx="0.9" cy="0.9" r="0.55">
-        <stop offset="0" stop-color="#39d0d8" stop-opacity="0.22"/>
-        <stop offset="1" stop-color="#39d0d8" stop-opacity="0"/></radialGradient>
-      <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
-        <circle cx="1.5" cy="1.5" r="1.1" fill="#ffffff" opacity="0.05"/></pattern>
-    </defs>
-<rect width="1200" height="300" rx="16" fill="url(#bg)"/>
-<rect width="1200" height="300" rx="16" fill="url(#dots)"/>
-<rect width="1200" height="300" rx="16" fill="url(#g1)"/>
-<rect width="1200" height="300" rx="16" fill="url(#g2)"/>
-<rect x="1" y="1" width="1198" height="298" rx="16" fill="none" stroke="#2b3140"/>
-<text x="64" y="120" font-size="60" font-weight="800" fill="url(#name)" letter-spacing="1">VEDANT WALUNJ</text>
-<text x="66" y="164" font-size="21" fill="#8b949e" font-family="monospace">// backend · cloud security · agentic AI</text>
-<g font-size="15"><rect x="66" y="196" width="150" height="30" rx="15" fill="#a371f71f" stroke="#a371f7"/><text x="141" y="216" fill="#c9a6ff" text-anchor="middle">📍 Mumbai, India</text><rect x="228" y="196" width="215" height="30" rx="15" fill="#39d0d81f" stroke="#39d0d8"/><text x="335" y="216" fill="#8ee7ec" text-anchor="middle">🎓 IT Engineer · Honors in AI</text></g>
-<rect x="726" y="70" width="410" height="168" rx="12" fill="#0d1117cc" stroke="#2b3140"/>
-<circle cx="746" cy="90" r="6" fill="#ff5f56"/>
-<circle cx="766" cy="90" r="6" fill="#ffbd2e"/>
-<circle cx="786" cy="90" r="6" fill="#27c93f"/>
-<text x="926" y="94" font-size="12" fill="#484f58" text-anchor="middle" font-family="monospace">vedant.js</text>
-<text x="748" y="128" font-size="15" font-family="monospace" xml:space="preserve"><tspan fill="#8b949e">const </tspan><tspan fill="#79c0ff">vedant</tspan><tspan fill="#8b949e"> = {</tspan></text>
-<text x="748" y="152" font-size="15" font-family="monospace" xml:space="preserve"><tspan fill="#8b949e">  role: </tspan><tspan fill="#a5d6ff">&quot;Backend + Cloud Developer&quot;</tspan><tspan fill="#8b949e">,</tspan></text>
-<text x="748" y="176" font-size="15" font-family="monospace" xml:space="preserve"><tspan fill="#8b949e">  focus: [</tspan><tspan fill="#a5d6ff">&quot;agentic AI&quot;</tspan><tspan fill="#8b949e">, </tspan><tspan fill="#a5d6ff">&quot;AWS security&quot;</tspan><tspan fill="#8b949e">],</tspan></text>
-<text x="748" y="200" font-size="15" font-family="monospace" xml:space="preserve"><tspan fill="#8b949e">  currently: </tspan><tspan fill="#a5d6ff">&quot;shipping&quot;</tspan><tspan fill="#8b949e"> </tspan><tspan fill="#e6edf3">🚀</tspan></text>
-<text x="748" y="224" font-size="15" font-family="monospace" xml:space="preserve"><tspan fill="#8b949e">}</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" font-family="-apple-system,'Segoe UI',Roboto,Ubuntu,sans-serif">
+<defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ffffff" opacity="0.028"/></pattern></defs>
+<rect width="1200" height="290" rx="16" fill="#0d1117"/><rect x="0.75" y="0.75" width="1198.5" height="288.5" rx="15.5" fill="none" stroke="#26303d" stroke-width="1"/><rect x="16" y="1.25" width="1168" height="1" fill="#ffffff" opacity="0.05"/>
+<rect width="1200" height="290" rx="16" fill="url(#dots)"/>
+<rect x="76" y="70" width="4" height="96" rx="2" fill="#4c9aff"/>
+<text x="100" y="122" font-size="54" font-weight="800" fill="#e6edf3" letter-spacing="-0.5">VEDANT WALUNJ</text>
+<text x="102" y="154" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="18" fill="#7d8590">Backend Engineer &#183; Cloud Security &#183; Agentic AI</text>
+<g font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="11.5" letter-spacing="1.5">
+<text x="102" y="196" fill="#7d8590">MUMBAI, INDIA</text>
+<text x="217.3" y="196" fill="#4c9aff">&#9679;</text>
+<text x="239.3" y="196" fill="#7d8590">IT · HONORS IN AI</text>
+<text x="387.0" y="196" fill="#4c9aff">&#9679;</text>
+<text x="409.0" y="196" fill="#7d8590">@VEDANT1317</text>
+</g>
+<rect x="724" y="58" width="404" height="174" rx="10" fill="#010409" stroke="#26303d"/>
+<rect x="724" y="58" width="404" height="34" rx="10" fill="#0d131c"/>
+<rect x="724" y="82" width="404" height="10" fill="#0d131c"/>
+<circle cx="744" cy="75" r="5" fill="#2b333d"/>
+<circle cx="762" cy="75" r="5" fill="#2b333d"/>
+<circle cx="780" cy="75" r="5" fill="#2b333d"/>
+<text x="1110" y="79" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="11.5" fill="#4b5563" text-anchor="end">vedant.ts</text>
+<text x="746" y="118" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#4b5563">const</tspan><tspan fill="#adbac7"> vedant</tspan><tspan fill="#4b5563"> = {</tspan></text>
+<text x="746" y="138" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#adbac7">  role:   </tspan><tspan fill="#a5d6ff">&quot;Backend + Cloud Dev&quot;</tspan><tspan fill="#4b5563">,</tspan></text>
+<text x="746" y="158" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#adbac7">  stack:  </tspan><tspan fill="#4b5563">[</tspan><tspan fill="#a5d6ff">&quot;Python&quot;</tspan><tspan fill="#4b5563">, </tspan><tspan fill="#a5d6ff">&quot;TS&quot;</tspan><tspan fill="#4b5563">, </tspan><tspan fill="#a5d6ff">&quot;AWS&quot;</tspan><tspan fill="#4b5563">],</tspan></text>
+<text x="746" y="178" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#adbac7">  focus:  </tspan><tspan fill="#a5d6ff">&quot;agentic AI · security&quot;</tspan><tspan fill="#4b5563">,</tspan></text>
+<text x="746" y="198" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#adbac7">  status: </tspan><tspan fill="#a5d6ff">&quot;always shipping&quot;</tspan><tspan fill="#4b5563">,</tspan></text>
+<text x="746" y="218" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="14" xml:space="preserve"><tspan fill="#4b5563">}</tspan></text>
 </svg>

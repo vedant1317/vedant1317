@@ -4,6 +4,10 @@
 Stdlib-only so it runs in GitHub Actions. The GitHub stats card is redrawn
 from live data (with stats.json as a fallback when the API is unavailable),
 so it never depends on the flaky public github-readme-stats service.
+
+Design: monochrome dark, a single restrained accent, editorial typography.
+No decorative gradients — language colors are the only chromatic element,
+because there they carry meaning.
 """
 import html
 import json
@@ -16,18 +20,25 @@ ASSETS = ROOT / "assets"
 ASSETS.mkdir(exist_ok=True)
 GH_USER = "vedant1317"
 
-# ---- palette (GitHub-dark friendly, vibrant) ----
-BG0, BG1 = "#0d1117", "#161b22"
-PANEL = "#161b22"
-STROKE = "#2b3140"
+# ---- palette: one accent, everything else neutral ----
+BG = "#0d1117"       # matches GitHub dark so cards sit flush
+CODE_BG = "#010409"
+BORDER = "#26303d"
+HAIR = "#1b232f"     # faint divider / leader
 TEXT = "#e6edf3"
-MUTED = "#8b949e"
-PURPLE, CYAN, PINK, GREEN, ORANGE = "#a371f7", "#39d0d8", "#f778ba", "#3fb950", "#f0883e"
+SUBTLE = "#adbac7"
+MUTED = "#7d8590"
+FAINT = "#4b5563"
+ACCENT = "#4c9aff"   # single accent — swap this one value to re-theme
+STRING = "#a5d6ff"   # soft blue for code strings (same family as accent)
+
+SANS = "-apple-system,'Segoe UI',Roboto,Ubuntu,sans-serif"
+MONO = "'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace"
 
 LANG_COLORS = {
     "JavaScript": "#f1e05a", "Python": "#3776ab", "TypeScript": "#3178c6",
     "CSS": "#563d7c", "HTML": "#e34c26", "PowerShell": "#4a7ebb",
-    "Java": "#b07219", "C++": "#f34b7d", "C": "#555555", "Shell": "#89e051",
+    "Java": "#b07219", "C++": "#f34b7d", "C": "#a8b9c0", "Shell": "#89e051",
 }
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"}
@@ -75,64 +86,81 @@ def esc(s):
     return html.escape(str(s))
 
 
+def frame(w, h, rx=14):
+    """Card background + subtle top highlight + hairline border."""
+    return (
+        f'<rect width="{w}" height="{h}" rx="{rx}" fill="{BG}"/>'
+        f'<rect x="0.75" y="0.75" width="{w-1.5}" height="{h-1.5}" rx="{rx-0.5}" '
+        f'fill="none" stroke="{BORDER}" stroke-width="1"/>'
+        f'<rect x="{rx}" y="1.25" width="{w-2*rx}" height="1" fill="#ffffff" opacity="0.05"/>'
+    )
+
+
+def dot_pattern():
+    return (f'<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">'
+            f'<circle cx="1" cy="1" r="1" fill="#ffffff" opacity="0.028"/></pattern>')
+
+
+def caps(x, y, label, anchor="start"):
+    """Small-caps letter-spaced section label with a short accent underline."""
+    return (f'<text x="{x}" y="{y}" font-family="{MONO}" font-size="12" letter-spacing="2.5" '
+            f'fill="{MUTED}" text-anchor="{anchor}">{esc(label.upper())}</text>'
+            f'<rect x="{x}" y="{y+9}" width="26" height="2" rx="1" fill="{ACCENT}"/>')
+
+
 # ============================ BANNER ============================
 def build_banner():
-    W, H = 1200, 300
+    W, H = 1200, 290
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+         f'viewBox="0 0 {W} {H}" font-family="{SANS}">',
+         f'<defs>{dot_pattern()}</defs>',
+         frame(W, H, 16),
+         f'<rect width="{W}" height="{H}" rx="16" fill="url(#dots)"/>']
+
+    # name block with accent rule
+    nx = 76
+    s.append(f'<rect x="{nx}" y="70" width="4" height="96" rx="2" fill="{ACCENT}"/>')
+    s.append(f'<text x="{nx+24}" y="122" font-size="54" font-weight="800" fill="{TEXT}" '
+             f'letter-spacing="-0.5">VEDANT WALUNJ</text>')
+    s.append(f'<text x="{nx+26}" y="154" font-family="{MONO}" font-size="18" fill="{MUTED}">'
+             f'Backend Engineer &#183; Cloud Security &#183; Agentic AI</text>')
+    # meta line with accent middots
+    meta = ["MUMBAI, INDIA", "IT · HONORS IN AI", "@VEDANT1317"]
+    mx = nx + 26
+    s.append(f'<g font-family="{MONO}" font-size="11.5" letter-spacing="1.5">')
+    for i, part in enumerate(meta):
+        if i:
+            s.append(f'<text x="{mx}" y="196" fill="{ACCENT}">&#9679;</text>')
+            mx += 22
+        s.append(f'<text x="{mx}" y="196" fill="{MUTED}">{esc(part)}</text>')
+        mx += len(part) * 8.1 + 10
+    s.append('</g>')
+
+    # terminal card
+    cx, cy, cw, ch = 724, 58, 404, 174
+    s.append(f'<rect x="{cx}" y="{cy}" width="{cw}" height="{ch}" rx="10" fill="{CODE_BG}" '
+             f'stroke="{BORDER}"/>')
+    s.append(f'<rect x="{cx}" y="{cy}" width="{cw}" height="34" rx="10" fill="#0d131c"/>')
+    s.append(f'<rect x="{cx}" y="{cy+24}" width="{cw}" height="10" fill="#0d131c"/>')
+    for i in range(3):
+        s.append(f'<circle cx="{cx+20+i*18}" cy="{cy+17}" r="5" fill="#2b333d"/>')
+    s.append(f'<text x="{cx+cw-18}" y="{cy+21}" font-family="{MONO}" font-size="11.5" '
+             f'fill="{FAINT}" text-anchor="end">vedant.ts</text>')
     code = [
-        [("#8b949e", "const "), ("#79c0ff", "vedant"), ("#8b949e", " = {")],
-        [("#8b949e", "  role: "), ("#a5d6ff", '"Backend + Cloud Developer"'), ("#8b949e", ",")],
-        [("#8b949e", "  focus: ["), ("#a5d6ff", '"agentic AI"'), ("#8b949e", ", "),
-         ("#a5d6ff", '"AWS security"'), ("#8b949e", "],")],
-        [("#8b949e", "  currently: "), ("#a5d6ff", '"shipping"'), ("#8b949e", " "), ("#e6edf3", "🚀")],
-        [("#8b949e", "}")],
+        [(FAINT, "const"), (SUBTLE, " vedant"), (FAINT, " = {")],
+        [(SUBTLE, "  role:   "), (STRING, '"Backend + Cloud Dev"'), (FAINT, ",")],
+        [(SUBTLE, "  stack:  "), (FAINT, "["), (STRING, '"Python"'), (FAINT, ", "),
+         (STRING, '"TS"'), (FAINT, ", "), (STRING, '"AWS"'), (FAINT, "],")],
+        [(SUBTLE, "  focus:  "), (STRING, '"agentic AI · security"'), (FAINT, ",")],
+        [(SUBTLE, "  status: "), (STRING, '"always shipping"'), (FAINT, ",")],
+        [(FAINT, "}")],
     ]
-    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-         f'font-family="\'Segoe UI\',Ubuntu,sans-serif">']
-    s.append(f'''<defs>
-      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/></linearGradient>
-      <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#a371f7"/><stop offset="0.55" stop-color="#39d0d8"/>
-        <stop offset="1" stop-color="#f778ba"/></linearGradient>
-      <radialGradient id="g1" cx="0.12" cy="0.15" r="0.5">
-        <stop offset="0" stop-color="#a371f7" stop-opacity="0.28"/>
-        <stop offset="1" stop-color="#a371f7" stop-opacity="0"/></radialGradient>
-      <radialGradient id="g2" cx="0.9" cy="0.9" r="0.55">
-        <stop offset="0" stop-color="#39d0d8" stop-opacity="0.22"/>
-        <stop offset="1" stop-color="#39d0d8" stop-opacity="0"/></radialGradient>
-      <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
-        <circle cx="1.5" cy="1.5" r="1.1" fill="#ffffff" opacity="0.05"/></pattern>
-    </defs>''')
-    s.append(f'<rect width="{W}" height="{H}" rx="16" fill="url(#bg)"/>')
-    s.append(f'<rect width="{W}" height="{H}" rx="16" fill="url(#dots)"/>')
-    s.append(f'<rect width="{W}" height="{H}" rx="16" fill="url(#g1)"/>')
-    s.append(f'<rect width="{W}" height="{H}" rx="16" fill="url(#g2)"/>')
-    s.append(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="16" fill="none" stroke="#2b3140"/>')
-    # left: name + tagline
-    s.append(f'<text x="64" y="120" font-size="60" font-weight="800" fill="url(#name)" '
-             f'letter-spacing="1">VEDANT WALUNJ</text>')
-    s.append(f'<text x="66" y="164" font-size="21" fill="#8b949e" font-family="monospace">'
-             f'// backend · cloud security · agentic AI</text>')
-    s.append(f'<g font-size="15">'
-             f'<rect x="66" y="196" width="150" height="30" rx="15" fill="#a371f71f" stroke="#a371f7"/>'
-             f'<text x="141" y="216" fill="#c9a6ff" text-anchor="middle">📍 Mumbai, India</text>'
-             f'<rect x="228" y="196" width="215" height="30" rx="15" fill="#39d0d81f" stroke="#39d0d8"/>'
-             f'<text x="335" y="216" fill="#8ee7ec" text-anchor="middle">🎓 IT Engineer · Honors in AI</text>'
-             f'</g>')
-    # right: code card
-    cx, cy = 726, 70
-    s.append(f'<rect x="{cx}" y="{cy}" width="410" height="168" rx="12" fill="#0d1117cc" stroke="#2b3140"/>')
-    for i, col in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
-        s.append(f'<circle cx="{cx+20+i*20}" cy="{cy+20}" r="6" fill="{col}"/>')
-    s.append(f'<text x="{cx+200}" y="{cy+24}" font-size="12" fill="#484f58" text-anchor="middle" '
-             f'font-family="monospace">vedant.js</text>')
-    ty = cy + 58
+    ty = cy + 60
     for line in code:
-        tx = cx + 22
         spans = "".join(f'<tspan fill="{c}">{esc(t)}</tspan>' for c, t in line)
-        s.append(f'<text x="{tx}" y="{ty}" font-size="15" font-family="monospace" '
+        s.append(f'<text x="{cx+22}" y="{ty}" font-family="{MONO}" font-size="14" '
                  f'xml:space="preserve">{spans}</text>')
-        ty += 24
+        ty += 20
     s.append("</svg>")
     (ASSETS / "banner.svg").write_text("\n".join(s))
     print("wrote assets/banner.svg")
@@ -140,55 +168,51 @@ def build_banner():
 
 # ========================= STATS CARD =========================
 def build_stats_card(st):
-    W, H = 860, 250
-    PW = 400  # left panel width
-    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-         f'font-family="\'Segoe UI\',Ubuntu,sans-serif">']
-    s.append('''<defs>
-      <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#161b22"/><stop offset="1" stop-color="#12151c"/></linearGradient>
-      <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#a371f7"/><stop offset="1" stop-color="#39d0d8"/></linearGradient>
-    </defs>''')
-    # two panels
-    s.append(f'<rect x="0" y="0" width="{PW}" height="{H}" rx="14" fill="url(#pg)" stroke="#2b3140"/>')
-    s.append(f'<rect x="{W-PW}" y="0" width="{PW}" height="{H}" rx="14" fill="url(#pg)" stroke="#2b3140"/>')
-    # -- left: stats --
-    s.append(f'<text x="28" y="42" font-size="19" font-weight="700" fill="#e6edf3">'
-             f'📊 GitHub Stats</text>')
-    s.append(f'<rect x="28" y="54" width="80" height="3" rx="2" fill="url(#acc)"/>')
+    W, H = 860, 236
+    PW = 400
+    RX = W - PW  # right panel start
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+         f'viewBox="0 0 {W} {H}" font-family="{SANS}">']
+    # panels
+    for px in (0, RX):
+        s.append(f'<g transform="translate({px},0)">{frame(PW, H, 12)}</g>')
+
+    # -- left: stats with dotted leaders --
+    s.append(f'<g transform="translate(28,0)">{caps(0, 40, "GitHub / Stats")}</g>')
     rows = [
-        (PURPLE, "📦", "Public Repos", st.get("repos", 9)),
-        (CYAN, "💾", "Total Commits", st.get("commits", 38)),
-        (PINK, "👥", "Followers", st.get("followers", 5)),
-        (GREEN, "🐛", "Issues Opened", st.get("issues", 2)),
-        (ORANGE, "🔤", "Languages Used", st.get("lang_count", 6)),
+        ("Public Repos", st.get("repos", 9)),
+        ("Total Commits", st.get("commits", 38)),
+        ("Followers", st.get("followers", 5)),
+        ("Issues Opened", st.get("issues", 2)),
+        ("Languages Used", st.get("lang_count", 7)),
     ]
-    y = 88
-    for col, ic, label, val in rows:
-        s.append(f'<text x="30" y="{y}" font-size="15">{ic}</text>')
-        s.append(f'<text x="58" y="{y}" font-size="15" fill="#c9d1d9">{esc(label)}</text>')
-        s.append(f'<text x="{PW-28}" y="{y}" font-size="16" font-weight="700" fill="{col}" '
+    y = 82
+    for label, val in rows:
+        s.append(f'<text x="28" y="{y}" font-family="{MONO}" font-size="12.5" letter-spacing="1" '
+                 f'fill="{MUTED}">{esc(label.upper())}</text>')
+        lx = 28 + len(label) * 8.0 + 12
+        s.append(f'<line x1="{lx}" y1="{y-4}" x2="{PW-58}" y2="{y-4}" stroke="{HAIR}" '
+                 f'stroke-width="1.4" stroke-dasharray="0.5 5" stroke-linecap="round"/>')
+        s.append(f'<text x="{PW-28}" y="{y}" font-size="19" font-weight="700" fill="{TEXT}" '
                  f'text-anchor="end">{esc(val)}</text>')
-        y += 31
+        y += 29
+
     # -- right: languages --
-    rx0 = W - PW + 28
-    s.append(f'<text x="{rx0}" y="42" font-size="19" font-weight="700" fill="#e6edf3">'
-             f'🧬 Most Used Languages</text>')
-    s.append(f'<rect x="{rx0}" y="54" width="80" height="3" rx="2" fill="url(#acc)"/>')
+    s.append(f'<g transform="translate({RX+28},0)">{caps(0, 40, "Most Used Languages")}</g>')
     langs = st.get("langs") or [["JavaScript", 38.7], ["Python", 28.6],
                                 ["TypeScript", 19.2], ["CSS", 8.5], ["HTML", 4.6]]
     barw = PW - 56
-    y = 84
+    y = 74
     for name, pct in langs:
-        col = LANG_COLORS.get(name, "#8b949e")
-        s.append(f'<text x="{rx0}" y="{y}" font-size="13.5" fill="#c9d1d9">{esc(name)}</text>')
-        s.append(f'<text x="{rx0+barw}" y="{y}" font-size="13" fill="#8b949e" '
-                 f'text-anchor="end">{pct}%</text>')
-        s.append(f'<rect x="{rx0}" y="{y+7}" width="{barw}" height="8" rx="4" fill="#21262d"/>')
-        s.append(f'<rect x="{rx0}" y="{y+7}" width="{max(6, barw*pct/100):.1f}" height="8" '
-                 f'rx="4" fill="{col}"/>')
-        y += 32
+        col = LANG_COLORS.get(name, MUTED)
+        s.append(f'<text x="{RX+28}" y="{y}" font-family="{MONO}" font-size="12.5" '
+                 f'fill="{SUBTLE}">{esc(name)}</text>')
+        s.append(f'<text x="{RX+28+barw}" y="{y}" font-family="{MONO}" font-size="12" '
+                 f'fill="{MUTED}" text-anchor="end">{pct}%</text>')
+        s.append(f'<rect x="{RX+28}" y="{y+8}" width="{barw}" height="6" rx="3" fill="#161b22"/>')
+        s.append(f'<rect x="{RX+28}" y="{y+8}" width="{max(5, barw*pct/100):.1f}" height="6" '
+                 f'rx="3" fill="{col}"/>')
+        y += 31
     s.append("</svg>")
     (ASSETS / "github-stats.svg").write_text("\n".join(s))
     print("wrote assets/github-stats.svg")
@@ -196,27 +220,24 @@ def build_stats_card(st):
 
 # =========================== FOOTER ===========================
 def build_footer():
-    W, H = 1200, 180
-    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-         f'font-family="\'Segoe UI\',Ubuntu,sans-serif">']
-    s.append('''<defs>
-      <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/></linearGradient>
-      <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#a371f7"/><stop offset="0.5" stop-color="#39d0d8"/>
-        <stop offset="1" stop-color="#f778ba"/></linearGradient>
-    </defs>''')
-    s.append(f'<rect width="{W}" height="{H}" rx="16" fill="url(#fbg)"/>')
-    s.append(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="16" fill="none" stroke="#2b3140"/>')
-    # skyline silhouette
-    bars = "".join(
-        f'<rect x="{60+i*58}" y="{H-30-h}" width="34" height="{h}" rx="3" fill="#39d0d8" opacity="0.10"/>'
-        for i, h in enumerate([40, 70, 55, 95, 60, 110, 48, 80, 65, 100, 52, 88, 44, 76, 58, 96, 50, 84, 62]))
-    s.append(bars)
-    s.append(f'<text x="{W/2}" y="72" font-size="30" font-weight="800" fill="url(#wave)" '
-             f'text-anchor="middle">⚡ Thanks for stopping by!</text>')
-    s.append(f'<text x="{W/2}" y="108" font-size="18" fill="#8b949e" text-anchor="middle" '
-             f'font-family="monospace">// let\'s build something that matters</text>')
+    W, H = 1200, 150
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+         f'viewBox="0 0 {W} {H}" font-family="{SANS}">',
+         f'<defs>{dot_pattern()}</defs>',
+         frame(W, H, 16),
+         f'<rect width="{W}" height="{H}" rx="16" fill="url(#dots)"/>']
+    cx = W / 2
+    # monogram
+    s.append(f'<rect x="{cx-22}" y="30" width="44" height="44" rx="10" fill="none" '
+             f'stroke="{BORDER}"/>')
+    s.append(f'<text x="{cx}" y="60" font-family="{MONO}" font-size="18" font-weight="700" '
+             f'fill="{ACCENT}" text-anchor="middle">VW</text>')
+    s.append(f'<text x="{cx}" y="105" font-size="17" font-weight="600" fill="{TEXT}" '
+             f'text-anchor="middle" letter-spacing="0.3">Thanks for stopping by</text>')
+    s.append(f'<text x="{cx}" y="128" font-family="{MONO}" font-size="12.5" fill="{MUTED}" '
+             f'text-anchor="middle">// let\'s build something that matters</text>')
+    # short accent underline
+    s.append(f'<rect x="{cx-16}" y="84" width="32" height="2" rx="1" fill="{ACCENT}"/>')
     s.append("</svg>")
     (ASSETS / "footer.svg").write_text("\n".join(s))
     print("wrote assets/footer.svg")

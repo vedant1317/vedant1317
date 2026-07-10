@@ -1,14 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180" font-family="'Segoe UI',Ubuntu,sans-serif">
-<defs>
-      <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/></linearGradient>
-      <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#a371f7"/><stop offset="0.5" stop-color="#39d0d8"/>
-        <stop offset="1" stop-color="#f778ba"/></linearGradient>
-    </defs>
-<rect width="1200" height="180" rx="16" fill="url(#fbg)"/>
-<rect x="1" y="1" width="1198" height="178" rx="16" fill="none" stroke="#2b3140"/>
-<rect x="60" y="110" width="34" height="40" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="118" y="80" width="34" height="70" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="176" y="95" width="34" height="55" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="234" y="55" width="34" height="95" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="292" y="90" width="34" height="60" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="350" y="40" width="34" height="110" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="408" y="102" width="34" height="48" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="466" y="70" width="34" height="80" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="524" y="85" width="34" height="65" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="582" y="50" width="34" height="100" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="640" y="98" width="34" height="52" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="698" y="62" width="34" height="88" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="756" y="106" width="34" height="44" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="814" y="74" width="34" height="76" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="872" y="92" width="34" height="58" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="930" y="54" width="34" height="96" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="988" y="100" width="34" height="50" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="1046" y="66" width="34" height="84" rx="3" fill="#39d0d8" opacity="0.10"/><rect x="1104" y="88" width="34" height="62" rx="3" fill="#39d0d8" opacity="0.10"/>
-<text x="600.0" y="72" font-size="30" font-weight="800" fill="url(#wave)" text-anchor="middle">⚡ Thanks for stopping by!</text>
-<text x="600.0" y="108" font-size="18" fill="#8b949e" text-anchor="middle" font-family="monospace">// let's build something that matters</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" font-family="-apple-system,'Segoe UI',Roboto,Ubuntu,sans-serif">
+<defs><pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ffffff" opacity="0.028"/></pattern></defs>
+<rect width="1200" height="150" rx="16" fill="#0d1117"/><rect x="0.75" y="0.75" width="1198.5" height="148.5" rx="15.5" fill="none" stroke="#26303d" stroke-width="1"/><rect x="16" y="1.25" width="1168" height="1" fill="#ffffff" opacity="0.05"/>
+<rect width="1200" height="150" rx="16" fill="url(#dots)"/>
+<rect x="578.0" y="30" width="44" height="44" rx="10" fill="none" stroke="#26303d"/>
+<text x="600.0" y="60" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="18" font-weight="700" fill="#4c9aff" text-anchor="middle">VW</text>
+<text x="600.0" y="105" font-size="17" font-weight="600" fill="#e6edf3" text-anchor="middle" letter-spacing="0.3">Thanks for stopping by</text>
+<text x="600.0" y="128" font-family="'SF Mono','JetBrains Mono','Cascadia Code',Consolas,monospace" font-size="12.5" fill="#7d8590" text-anchor="middle">// let's build something that matters</text>
+<rect x="584.0" y="84" width="32" height="2" rx="1" fill="#4c9aff"/>
 </svg>

@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=vedant1317&style=for-the-badge&color=a371f7&label=PROFILE+VIEWS" alt="views">
-  <img src="https://img.shields.io/github/followers/vedant1317?style=for-the-badge&color=39d0d8&labelColor=161b22&logo=github" alt="followers">
-  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-52_solved-f778ba?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=161b22" alt="leetcode"></a>
+  <img src="https://komarev.com/ghpvc/?username=vedant1317&style=for-the-badge&color=388bfd&labelColor=0d1117&label=PROFILE+VIEWS" alt="views">
+  <img src="https://img.shields.io/github/followers/vedant1317?style=for-the-badge&color=388bfd&labelColor=0d1117&logo=github&logoColor=white" alt="followers">
+  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-52_solved-388bfd?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=0d1117" alt="leetcode"></a>
 </p>
 
 ---
@@ -49,24 +49,6 @@
   <img src="https://skillicons.dev/icons?i=react,nodejs,express,flask,fastapi,tailwind&theme=dark" alt="frameworks"><br>
   <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,dynamodb,aws,docker&theme=dark" alt="data & cloud"><br>
   <img src="https://skillicons.dev/icons?i=git,github,vscode,postman,linux,vercel&theme=dark" alt="tools">
-</p>
-
-## 🧩 Tech Stack
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white">
-  <br>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white">
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white">
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white">
 </p>
 
 ---

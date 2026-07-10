@@ -154,21 +154,28 @@ for theme, C in THEMES.items():
     out.append(f'<g font-size="{ART_FS}" fill="{C["art"]}">')
     for i, line in enumerate(art_lines):
         if line:
+            # textLength pins the line width exactly, whatever font the
+            # renderer falls back to (GitHub renders SVGs inside <img>).
+            tl = len(line) * ART_CW
             out.append(f'<text x="{PAD}" y="{art_y0 + i * ART_LH:.1f}" '
+                       f'textLength="{tl:.1f}" lengthAdjust="spacingAndGlyphs" '
                        f'xml:space="preserve">{html.escape(line)}</text>')
     out.append("</g>")
     info_x = PAD + ART_W
     info_y0 = PAD + (SVG_H - 2 * PAD - len(INFO) * INFO_LH) / 2 + INFO_FS
+    INFO_CW = INFO_FS * 0.6
     out.append(f'<g font-size="{INFO_FS}">')
     for i, spans in enumerate(INFO):
-        parts = []
+        parts, nchars = [], 0
         for cls, txt in spans:
             if not txt:
                 continue
             bold = ' font-weight="bold"' if cls in ("t", "h") else ""
             parts.append(f'<tspan fill="{C[cls]}"{bold}>{html.escape(txt)}</tspan>')
+            nchars += len(txt)
         if parts:
             out.append(f'<text x="{info_x}" y="{info_y0 + i * INFO_LH:.1f}" '
+                       f'textLength="{nchars * INFO_CW:.1f}" lengthAdjust="spacingAndGlyphs" '
                        f'xml:space="preserve">{"".join(parts)}</text>')
     out.append("</g></svg>")
     (ROOT / f"profile-{theme}.svg").write_text("\n".join(out))

@@ -132,10 +132,12 @@ THEMES = {
                   v="#0969da", d="#8c959f", h="#1f2328"),
 }
 
-ART_FS, ART_LH = 13.0, 13.6
 INFO_FS, INFO_LH = 15.5, 24.0
-ART_CW = ART_FS * 0.6
 PAD = 34
+# scale art font so the art block stays ~<= info block height and ~<= 470px wide
+ART_LH = min(13.6, (len(INFO) * INFO_LH) / ROWS, 470 / (COLS * 0.63))
+ART_FS = ART_LH * 0.955
+ART_CW = ART_FS * 0.6
 ART_W = COLS * ART_CW + 24
 SVG_W = 1060
 SVG_H = int(max(ROWS * ART_LH, len(INFO) * INFO_LH) + PAD * 2)

@@ -13,7 +13,6 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=vedant1317&style=for-the-badge&color=d97757&labelColor=1f1d1a&label=PROFILE+VIEWS" alt="views">
   <img src="https://img.shields.io/github/followers/vedant1317?style=for-the-badge&color=d97757&labelColor=1f1d1a&logo=github&logoColor=white" alt="followers">
-  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-52_solved-d97757?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=1f1d1a" alt="leetcode"></a>
 </p>
 
 ---

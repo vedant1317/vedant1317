@@ -1,7 +1,7 @@
 {
-  "repos": 14,
+  "repos": 15,
   "followers": 7,
-  "commits": 66,
+  "commits": 86,
   "lc_total": 52,
   "lc_easy": 31,
   "lc_medium": 21,
@@ -9,25 +9,25 @@
   "langs": [
     [
       "JavaScript",
-      43.7
+      44.6
     ],
     [
       "Python",
-      27.7
+      30.5
     ],
     [
       "TypeScript",
-      16.4
+      14.2
     ],
     [
       "CSS",
-      7.4
+      6.6
     ],
     [
       "HTML",
-      4.3
+      3.7
     ]
   ],
-  "lang_count": 8,
+  "lang_count": 9,
   "issues": 2
 }

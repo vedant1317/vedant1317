@@ -29,8 +29,43 @@
 ### Tech
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,ts,js,c,cpp,java&theme=dark" alt="languages"><br>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,react,fastapi,flask,tailwind&theme=dark" alt="frameworks"><br>
-  <img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,dynamodb,aws,docker&theme=dark" alt="data and cloud"><br>
-  <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,postman,vercel&theme=dark" alt="tools">
+  <img src="https://skillicons.dev/icons?i=python,ts,js,c,cpp,java,html,css,bash,powershell&theme=dark" alt="languages"><br>
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,threejs,d3,nodejs,express,fastapi,flask,npm&theme=dark" alt="web"><br>
+  <img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,dynamodb,aws,gcp,azure,docker,jenkins,githubactions&theme=dark" alt="data, cloud and devops"><br>
+  <img src="https://skillicons.dev/icons?i=pytorch,sklearn,git,github,linux,vscode,postman,vercel,replit,latex&theme=dark" alt="ml and tools">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Anthropic-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=anthropic&logoColor=white" alt="Anthropic">
+  <img src="https://img.shields.io/badge/Gemini-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=googlegemini&logoColor=white" alt="Gemini">
+  <img src="https://img.shields.io/badge/OpenAI-0D1117?style=flat-square&labelColor=0D1117&color=0D1117" alt="OpenAI">
+  <img src="https://img.shields.io/badge/Groq-0D1117?style=flat-square&labelColor=0D1117&color=0D1117" alt="Groq">
+  <img src="https://img.shields.io/badge/MCP-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=modelcontextprotocol&logoColor=white" alt="MCP">
+  <img src="https://img.shields.io/badge/NumPy-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/Pandas-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/SciPy-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=scipy&logoColor=white" alt="SciPy">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Hono-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=hono&logoColor=white" alt="Hono">
+  <img src="https://img.shields.io/badge/Neo4j-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=neo4j&logoColor=white" alt="Neo4j">
+  <img src="https://img.shields.io/badge/Mongoose-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=mongoose&logoColor=white" alt="Mongoose">
+  <img src="https://img.shields.io/badge/SQLAlchemy-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy">
+  <img src="https://img.shields.io/badge/Drizzle-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=drizzle&logoColor=white" alt="Drizzle">
+  <img src="https://img.shields.io/badge/JWT-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=jsonwebtokens&logoColor=white" alt="JWT">
+  <img src="https://img.shields.io/badge/Pytest-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=pytest&logoColor=white" alt="Pytest">
+  <img src="https://img.shields.io/badge/Jinja-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=jinja&logoColor=white" alt="Jinja">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Render-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=render&logoColor=white" alt="Render">
+  <img src="https://img.shields.io/badge/Stripe-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=stripe&logoColor=white" alt="Stripe">
+  <img src="https://img.shields.io/badge/Twilio-0D1117?style=flat-square&labelColor=0D1117&color=0D1117" alt="Twilio">
+  <img src="https://img.shields.io/badge/Razorpay-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=razorpay&logoColor=white" alt="Razorpay">
+  <img src="https://img.shields.io/badge/Overleaf-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=overleaf&logoColor=white" alt="Overleaf">
+  <img src="https://img.shields.io/badge/Framer%20Motion-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=framer&logoColor=white" alt="Framer Motion">
+  <img src="https://img.shields.io/badge/shadcn/ui-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=shadcnui&logoColor=white" alt="shadcn/ui">
+  <img src="https://img.shields.io/badge/Radix%20UI-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=radixui&logoColor=white" alt="Radix UI">
+  <img src="https://img.shields.io/badge/Chart.js-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=chartdotjs&logoColor=white" alt="Chart.js">
+  <img src="https://img.shields.io/badge/i18next-0D1117?style=flat-square&labelColor=0D1117&color=0D1117&logo=i18next&logoColor=white" alt="i18next">
 </p>

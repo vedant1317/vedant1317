@@ -7,9 +7,7 @@
 </p>
 
 <p align="center">
-  IT engineering student at <b>KJ Somaiya College of Engineering</b> (Honors in AI) and
-  Technical Intern on the DevOps team at <b>ARCON</b> — automating CVE remediation and
-  AWS CloudTrail security auditing.
+  IT engineering student at <b>KJ Somaiya College of Engineering</b> (Honors in AI)
 </p>
 
 <p align="center">
@@ -26,7 +24,7 @@
 - 🔭 I build **backend systems, cloud-security tooling, and agentic AI** platforms.
 - ☁️ Currently deep in **AWS security automation** — CloudTrail auditing and CVE remediation.
 - 🧰 Comfortable end-to-end: REST APIs, SQL & NoSQL, CI/CD, and React dashboards.
-- 🏆 2× national hackathon finalist · Treasurer, KJSCE ACM Student Chapter.
+- 🏆 2× national hackathon winner.
 
 ### Tech
 

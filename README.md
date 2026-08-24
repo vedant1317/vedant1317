@@ -29,11 +29,8 @@
 ### Tech
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,ts,js,c,cpp,java,html,css,bash,powershell&theme=dark" alt="languages"><br>
-  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,threejs,d3,nodejs,express,fastapi,flask,npm&theme=dark" alt="web"><br>
-  <img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,dynamodb,aws,gcp,azure,docker,jenkins,githubactions&theme=dark" alt="data, cloud and devops"><br>
-  <img src="https://skillicons.dev/icons?i=pytorch,sklearn,git,github,linux,vscode,postman,vercel,replit,latex&theme=dark" alt="ml and tools"><br>
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=claude,gemini,groq,mcp,hono,neo4j,render,stripe,mongoose,sqlalchemy&theme=dark" alt="ai and services"><br>
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=drizzle,jwt,pytest,numpy,pandas,scipy,overleaf,framer,shadcn,radix&theme=dark" alt="libraries"><br>
-  <img src="https://go-skill-icons.vercel.app/api/icons?i=chartjs&theme=dark" alt="chart.js"><img src="assets/tech-extra.svg" alt="OpenAI, Twilio, Razorpay, Jinja, i18next">
+  <img src="https://skillicons.dev/icons?i=python,ts,js,c,cpp,java&theme=dark" alt="languages"><br>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,react,fastapi,flask,tailwind&theme=dark" alt="frameworks"><br>
+  <img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,dynamodb,aws,docker&theme=dark" alt="data and cloud"><br>
+  <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,postman,vercel&theme=dark" alt="tools">
 </p>

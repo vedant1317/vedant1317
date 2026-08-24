@@ -1,95 +1,38 @@
-<!-- ============ HERO BANNER ============ -->
-<img src="assets/banner.svg" alt="Vedant Walunj — backend, cloud security, agentic AI" width="100%">
-
-<h1 align="center">Namaste 🙏 I'm Vedant Walunj</h1>
+<h1 align="center">Hi, I'm Vedant 👋</h1>
 
 <p align="center">
-  IT engineering student at <b>KJ Somaiya College of Engineering</b> (Honors in AI), building
-  <b>backend systems, cloud-security automation, and agentic AI</b>. Currently a Technical Intern
-  on the DevOps team at <b>ARCON</b>, automating CVE remediation and AWS security auditing —
-  and always shipping something new.
+  <a href="https://vedant-walunj-portfolio.vercel.app">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=560&height=45&lines=Backend+systems+%26+REST+APIs;Cloud+security+automation+on+AWS;Agentic+AI+that+actually+ships;Databases%2C+Docker+%26+DevOps+tooling" alt="Backend systems, cloud security automation, agentic AI, DevOps tooling">
+  </a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=vedant1317&style=for-the-badge&color=d97757&labelColor=1f1d1a&label=PROFILE+VIEWS" alt="views">
-  <img src="https://img.shields.io/github/followers/vedant1317?style=for-the-badge&color=d97757&labelColor=1f1d1a&logo=github&logoColor=white" alt="followers">
+  IT engineering student at <b>KJ Somaiya College of Engineering</b> (Honors in AI) and
+  Technical Intern on the DevOps team at <b>ARCON</b> — automating CVE remediation and
+  AWS CloudTrail security auditing.
+</p>
+
+<p align="center">
+  <a href="https://vedant-walunj-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0D1117?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"></a>
+  <a href="https://www.linkedin.com/in/vedantwalunj/"><img src="https://img.shields.io/badge/LinkedIn-0D1117?style=flat-square&logo=linkedin&logoColor=58A6FF" alt="LinkedIn"></a>
+  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-0D1117?style=flat-square&logo=leetcode&logoColor=FFA116" alt="LeetCode"></a>
+  <a href="mailto:vedantwalunj1317@gmail.com"><img src="https://img.shields.io/badge/Email-0D1117?style=flat-square&logo=gmail&logoColor=EA4335" alt="Email"></a>
 </p>
 
 ---
 
-## 🧑‍💻 About Me
+### About
 
 - 🔭 I build **backend systems, cloud-security tooling, and agentic AI** platforms.
-- ☁️ Currently deep in **AWS security automation** — CloudTrail auditing & CVE remediation — at ARCON.
-- 🧰 Full-stack comfortable: REST APIs, SQL & NoSQL databases, DevOps pipelines, and React dashboards.
-- 🌱 Always leveling up — exploring distributed systems, infrastructure, and DSA in `C++`.
-- 🏆 2× national hackathon finalist · 💬 Ask me about **Python, TypeScript, agentic AI, or cloud security**.
+- ☁️ Currently deep in **AWS security automation** — CloudTrail auditing and CVE remediation.
+- 🧰 Comfortable end-to-end: REST APIs, SQL & NoSQL, CI/CD, and React dashboards.
+- 🏆 2× national hackathon finalist · Treasurer, KJSCE ACM Student Chapter.
 
-## 🔗 Connect With Me
-
-<p align="left">
-  <a href="mailto:vedantwalunj1317@gmail.com"><img src="https://img.shields.io/badge/Gmail-1f1d1a?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Gmail"></a>
-  <a href="https://www.linkedin.com/in/vedantwalunj/"><img src="https://img.shields.io/badge/LinkedIn-1f1d1a?style=for-the-badge&logo=linkedin&logoColor=4493f8" alt="LinkedIn"></a>
-  <a href="https://leetcode.com/u/vedantvw/"><img src="https://img.shields.io/badge/LeetCode-1f1d1a?style=for-the-badge&logo=leetcode&logoColor=FFA116" alt="LeetCode"></a>
-  <a href="https://vedant-walunj-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-1f1d1a?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
-  <a href="https://letterboxd.com/vboiwatches/"><img src="https://img.shields.io/badge/Letterboxd-1f1d1a?style=for-the-badge&logo=letterboxd&logoColor=00E054" alt="Letterboxd"></a>
-</p>
-
----
-
-## 📊 GitHub Stats
-
-<img src="assets/github-stats.svg" alt="Vedant's GitHub stats" width="100%">
-
-## 🛠️ Languages & Tools I've Worked With
+### Tech
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=c,cpp,python,java,js,ts&theme=dark" alt="languages"><br>
-  <img src="https://skillicons.dev/icons?i=react,nodejs,express,flask,fastapi,tailwind&theme=dark" alt="frameworks"><br>
-  <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,dynamodb,aws,docker&theme=dark" alt="data & cloud"><br>
-  <img src="https://skillicons.dev/icons?i=git,github,vscode,postman,linux,vercel&theme=dark" alt="tools">
+  <img src="https://skillicons.dev/icons?i=python,ts,js,c,cpp,java&theme=dark" alt="languages"><br>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,react,fastapi,flask,tailwind&theme=dark" alt="frameworks"><br>
+  <img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,dynamodb,aws,docker&theme=dark" alt="data and cloud"><br>
+  <img src="https://skillicons.dev/icons?i=git,github,linux,vscode,postman,vercel&theme=dark" alt="tools">
 </p>
-
----
-
-## 📌 Featured Repositories
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🌐 <a href="https://github.com/vedant1317/vedant-walunj-portfolio">Portfolio</a></h3>
-      MERN-stack personal portfolio with live GitHub / LeetCode / Letterboxd feeds and a self-hosted profile card.
-      <br><br>
-      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB">
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white">
-      <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white">
-    </td>
-    <td width="50%" valign="top">
-      <h3>🏎️ <a href="https://github.com/vedant1317/CC-Project">CC-Project</a></h3>
-      Automated database-evaluation suite for cloud-native apps — benchmarks PostgreSQL, MongoDB & DynamoDB.
-      <br><br>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🛡️ <a href="https://github.com/vedant1317/VAPT-Project">VAPT-Project</a></h3>
-      Vulnerability assessment & penetration-testing toolkit — automating security scans and reporting.
-      <br><br>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-      <img src="https://img.shields.io/badge/Security-a371f7?style=flat-square&logo=hackthebox&logoColor=white">
-    </td>
-    <td width="50%" valign="top">
-      <h3>🧬 <a href="https://github.com/vedant1317/MolecularGNN">MolecularGNN</a></h3>
-      Graph neural network for molecular property prediction — deep learning on chemical structures.
-      <br><br>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-      <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white">
-    </td>
-  </tr>
-</table>
-
----
-
-<img src="assets/footer.svg" alt="Thanks for stopping by" width="100%">

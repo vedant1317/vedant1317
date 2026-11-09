@@ -1,5 +1,5 @@
 {
-  "repos": 17,
+  "repos": 16,
   "followers": 7,
   "commits": 103,
   "lc_total": 52,
@@ -9,25 +9,25 @@
   "langs": [
     [
       "JavaScript",
-      43.4
-    ],
-    [
-      "TypeScript",
-      22.3
+      50.0
     ],
     [
       "Python",
-      20.7
+      27.1
+    ],
+    [
+      "TypeScript",
+      12.4
     ],
     [
       "CSS",
-      7.8
+      6.3
     ],
     [
       "HTML",
-      3.0
+      3.7
     ]
   ],
-  "lang_count": 12,
+  "lang_count": 9,
   "issues": 2
 }
